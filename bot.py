@@ -155,6 +155,16 @@ async def call_llm(prompt: str, system_prompt: str, temperature: float = 0.0, ma
 # ENDPOINTS
 # =============================================================================
 
+@app.get("/")
+async def root():
+    return {
+        "service": "magicpin Vera AI Bot",
+        "status": "online",
+        "healthz": "/v1/healthz",
+        "metadata": "/v1/metadata",
+        "docs": "/docs"
+    }
+
 @app.get("/v1/healthz")
 async def healthz():
     counts = {"category": 0, "merchant": 0, "customer": 0, "trigger": 0}
