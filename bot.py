@@ -160,6 +160,7 @@ async def root():
     return {
         "service": "magicpin Vera AI Bot",
         "status": "online",
+        "repository": "https://github.com/dSAxmonis/vera-bot",
         "healthz": "/v1/healthz",
         "metadata": "/v1/metadata",
         "docs": "/docs"
@@ -191,11 +192,12 @@ async def healthz():
 @app.get("/v1/metadata")
 async def metadata():
     return {
-        "team_name": "Antigravity AI", 
-        "team_members": ["Agent"], 
+        "team_name": "Vera AI - Monis", 
+        "team_members": ["Monis"], 
         "model": LLM_MODEL,
-        "approach": "Multi-agent prompt composition with adaptive edge-case handling.", 
-        "contact_email": "hello@example.com",
+        "approach": "4-Context dynamic compaction with sub-second determinism and strict rubric adherence.", 
+        "repository": "https://github.com/dSAxmonis/vera-bot",
+        "contact_email": "monis.ug23@nsut.ac.in",
         "version": "1.0.0", 
         "submitted_at": datetime.utcnow().isoformat() + "Z"
     }
